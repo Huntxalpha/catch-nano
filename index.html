@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Catch Nano</title>
+    <!-- Open Graph metadata for Twitter/X preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Catch Nano – attrapez les fruits !" />
+    <meta property="og:description" content="Déplacez votre panier pour attraper les fruits et éviter les bombes. Combien de points pouvez-vous marquer ?" />
+    <!-- Utilise une image externe pour l’aperçu social, afin d’éviter les images encodées en base64 non supportées par X/Twitter. -->
+    <meta property="og:image" content="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=600&q=80" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div id="game-container">
+        <!-- Affichage du score et des vies -->
+        <div id="hud">
+            <span>Score : <span id="score">0</span></span>
+            <span>Vies : <span id="lives">3</span></span>
+        </div>
+        <!-- Canvas pour le jeu -->
+        <canvas id="game-canvas" width="320" height="480"></canvas>
+        <!-- Écran de démarrage -->
+        <div id="start-overlay" class="overlay">
+            <h1>Catch Nano</h1>
+            <p>Déplacez votre panier pour attraper les fruits et éviter les bombes. Combien de points pouvez-vous marquer ?</p>
+            <button id="start-button" class="btn">Jouer</button>
+        </div>
+        <!-- Écran de fin de partie -->
+        <div id="end-overlay" class="overlay" style="display:none;">
+            <h2>Fin de partie</h2>
+            <p>Votre score : <span id="final-score">0</span></p>
+            <button id="restart-button" class="btn">Rejouer</button>
+            <a id="share-button" class="btn" href="#" target="_blank" rel="noopener noreferrer">Partager mon score</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
